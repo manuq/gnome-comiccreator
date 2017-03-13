@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+_Name=Comic Creator
+_Comment=A simple comic creator
+Icon=org.gnome.ComicCreator
+Exec=gapplication launch org.gnome.ComicCreator
+DBusActivatable=true
+StartupNotify=true
+_Keywords=gtk;gjs;demo;development;

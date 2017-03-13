@@ -1,0 +1,11 @@
+[Unit]
+# Optional
+Description=org.gnome.ComicCreator
+# Optional (obviously)
+Documentation=http://www.example.com/comiccreator/
+
+[BusName]
+# Optional
+Name=org.gnome.ComicCreator
+# Optional
+Service=org.gnome.ComicCreator.service

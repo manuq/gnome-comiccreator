@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>org.gnome.ComicCreator.desktop</id>
+  <licence>CC0</licence>
+  <description>
+    <_p>
+      A simple comic creator.
+    </_p>
+  </description>
+  <screenshots>
+    <screenshot type="default" width="1024" height="768">https://www.example.com/comiccreator/screenshots/large.png</screenshot>
+  </screenshots>
+  <url type="homepage">https://www.example.com/comiccreator</url>
+  <updatecontact>manuel_quinones_at_src.gnome.org</updatecontact>
+</component>

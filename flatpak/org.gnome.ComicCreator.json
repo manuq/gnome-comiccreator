@@ -1,0 +1,72 @@
+{
+    "app-id": "org.gnome.ComicCreator",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "3.22",
+    "sdk": "org.gnome.Sdk",
+    "command": "comiccreator",
+    "finish-args": [
+        "--share=ipc", "--socket=x11",
+        "--socket=wayland",
+        "--share=network",
+        "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
+        "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+    ],
+    "build-options" : {
+        "cflags": "-O2 -g",
+        "cxxflags": "-O2 -g",
+        "env": {
+            "V": "1"
+        }
+    },
+    "cleanup": ["/include", "/lib/pkgconfig",
+                "/share/pkgconfig", "/share/aclocal",
+                "/man", "/share/man", "/share/gtk-doc",
+                "/share/vala",
+                "*.la", "*.a"],
+    "modules": [
+        {
+            "name": "meson",
+            "no-autogen": true,
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/mesonbuild/meson/releases/download/0.38.1/meson-0.38.1.tar.gz",
+                    "sha256": "dcb05349b32427924fa2a258a5e23e40e09c1bf9dd09919198c3a2ae1c38ba53"
+                },
+                {
+                    "type": "patch",
+                    "path": "meson-glib-check.patch",
+                    "strip-components": 0
+                },
+                {
+                    "type": "file",
+                    "path": "setuptools-makefile",
+                    "dest-filename": "Makefile"
+                }
+            ]
+        },
+        {
+            "name": "emeus",
+            "buildsystem": "meson",
+            "builddir": true,
+            "config-opts": [
+                "--libdir=/app/lib"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/ebassi/emeus.git"
+                }
+            ]
+        },
+        {
+            "name": "comiccreator",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/manuq/gnome-comiccreator.git"
+                }
+            ]
+        }
+    ]
+}

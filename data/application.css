@@ -1,0 +1,15 @@
+.big-label {
+    font-size: 4em;
+    font-weight: bold;
+}
+.bubble-text {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 2em;
+    font-weight: 500;
+}
+.comic-edit {
+    background-color: rgb(158, 255, 153);
+}
+.frame-edit {
+    background-color: rgb(255, 255, 153);
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/gnome/ComicCreator">
+    <file preprocess="xml-stripblanks">app-menu.ui</file>
+    <file preprocess="xml-stripblanks">main.ui</file>
+    <file>application.css</file>
+    <file>img_1687.jpg</file>
+    <file>img_1688.jpg</file>
+    <file>img_1690.jpg</file>
+  </gresource>
+</gresources>

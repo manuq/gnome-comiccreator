@@ -1,0 +1,6 @@
+[type: gettext/glade]data/app-menu.ui
+[type: gettext/glade]data/main.ui
+data/org.gnome.ComicCreator.desktop.in
+data/org.gnome.ComicCreator.appdata.xml.in
+data/org.gnome.ComicCreator.gschema.xml
+src/main.js
